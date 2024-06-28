@@ -1,0 +1,1887 @@
+#! C:/Program Files/Nuke14.0v2/nuke-14.0.2.dll -nx
+version 14.0 v2
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="2557" h="1368" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1894" stretch="1"/>
+            <splitter orientation="2">
+                <split size="722"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="604"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                    <page id="DAG.2"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+                <page id="Scenegraph.1"/>
+                <page id="uk.co.thefoundry.scripteditor.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name E:/dev/NukeMask3D/NukeSample.nk
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement OCIO
+ OCIO_config studio-config-v1.0.0_aces-v1.3_ocio-v2.1
+ defaultViewerLUT "OCIO LUTs"
+ workingSpaceLUT scene_linear
+ monitorLut "sRGB (ACES)"
+ monitorOutLUT "sRGB (ACES)"
+ int8Lut matte_paint
+ int16Lut texture_paint
+ logLut compositing_log
+ floatLut scene_linear
+}
+Camera4 {
+ inputs 0
+ translate {2.021694899 0.9400000572 0.971607089}
+ rotate {0 55.80456543 0}
+ focal 25
+ name Camera1
+ xpos 443
+ ypos -2
+}
+set Ncb0ae400 [stack 0]
+push $Ncb0ae400
+Group {
+ name Simple_Scene
+ xpos 247
+ ypos 19
+}
+ Input {
+  inputs 0
+  name Camera
+  xpos 160
+  ypos 30
+ }
+ Card2 {
+  inputs 0
+  translate {0 0 -5.519999981}
+  uniform_scale 9.6
+  control_points {3 3 3 6 
+
+1 {-0.5 0 -0.5} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0.1666666865} 0 {0 0 0} 0 {0 0 0} 
+1 {0 0 -0.5} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0.1666666865} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 0 -0.5} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0.1666666865} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0.1666666716} 0 {0 0 -0.1666666716} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0.1666666716} 0 {0 0 -0.1666666716} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0.1666666716} 0 {0 0 -0.1666666716} 0 {1 0.5 0} 
+1 {-0.5 0 0.5} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 0 -0.1666666865} 0 {0 1 0} 
+1 {0 0 0.5} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 0 -0.1666666865} 0 {0.5 1 0} 
+1 {0.5 0 0.5} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 0 -0.1666666865} 0 {1 1 0} }
+  name Card3
+  xpos 353
+  ypos -179
+ }
+ Card2 {
+  inputs 0
+  orientation YZ
+  translate {-4.739999294 0 -1.000000477}
+  uniform_scale 9.6
+  control_points {3 3 3 6 
+
+1 {-0.5 0 -0.5} 0 {0 0 0.1666666865} 0 {0 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 
+1 {-0.5 0 0} 0 {0 0 0.1666666716} 0 {0 0 -0.1666666716} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {-0.5 0 0.5} 0 {0 0 0} 0 {0 0 -0.1666666865} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {1 0 0} 
+1 {0 0 -0.5} 0 {0 0 0.1666666865} 0 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0 0 0.1666666716} 0 {0 0 -0.1666666716} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0.5 0.5 0} 
+1 {0 0 0.5} 0 {0 0 0} 0 {0 0 -0.1666666865} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {1 0.5 0} 
+1 {0.5 0 -0.5} 0 {0 0 0.1666666865} 0 {0 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 1 0} 
+1 {0.5 0 0} 0 {0 0 0.1666666716} 0 {0 0 -0.1666666716} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0.5 1 0} 
+1 {0.5 0 0.5} 0 {0 0 0} 0 {0 0 -0.1666666865} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {1 1 0} }
+  name Card2
+  xpos 227
+  ypos -127
+ }
+ Sphere {
+  inputs 0
+  translate {-2.75999999 0 0}
+  name Sphere1
+  xpos 724
+  ypos -175
+ }
+ Cylinder {
+  inputs 0
+  translate {-2 0 -3.150000095}
+  name Cylinder1
+  xpos 614
+  ypos -173
+ }
+ Cube {
+  inputs 0
+  cube {-0.4900000095 -0.5 -0.5 0.5 0.5 0.5}
+  translate {-1.950000048 0 -1.610000014}
+  name Cube1
+  xpos 518
+  ypos -179
+ }
+ Card2 {
+  inputs 0
+  orientation ZX
+  translate {0 0 -1.9799999}
+  uniform_scale 9.6
+  control_points {3 3 3 6 
+
+1 {-0.5 0 -0.5} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0.1666666865} 0 {0 0 0} 0 {0 0 0} 
+1 {0 0 -0.5} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0.1666666865} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 0 -0.5} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0.1666666865} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0.1666666716} 0 {0 0 -0.1666666716} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0.1666666716} 0 {0 0 -0.1666666716} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0.1666666716} 0 {0 0 -0.1666666716} 0 {1 0.5 0} 
+1 {-0.5 0 0.5} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 0 -0.1666666865} 0 {0 1 0} 
+1 {0 0 0.5} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 0 -0.1666666865} 0 {0.5 1 0} 
+1 {0.5 0 0.5} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 0 -0.1666666865} 0 {1 1 0} }
+  name Card1
+  xpos 263
+  ypos -180
+ }
+ Scene {
+  inputs 6
+  name Scene1
+  xpos 363
+  ypos -68
+ }
+push 0
+add_layer {P P.red P.green P.blue P.X P.Y P.Z P.x P.y P.z P.alpha}
+add_layer {N N.red N.green N.blue N.X N.Y N.Z N.x N.y N.z N.alpha}
+ ScanlineRender {
+  inputs 3
+  conservative_shader_sampling false
+  motion_vectors_type distance
+  output_shader_vectors true
+  P_channel P
+  N_channel N
+  name ScanlineRender1
+  xpos 353
+  ypos 50
+ }
+ Output {
+  name Output1
+  xpos 262
+  ypos 155
+ }
+end_group
+Group {
+ inputs 2
+ name Mask3D2
+ knobChanged "\n\nn = nuke.thisNode()\nk = nuke.thisKnob()\n\n\nimport math\n# import numpy as np\n\nclass Mask():\n\n    def __init__(self, node):\n        #self.n = nuke.thisNode()\n        self.n = node\n        if self.n\[\"ctrl\"].getValue() == 0:\n            self.point1()\n        if self.n\[\"ctrl\"].getValue() == 1:\n            self.point2()\n        \n\n\n    def point1(self):\n        p0 = self.n\[\"focal_point\"].getValue()\n\n        with self.n:\n            sampler = nuke.toNode(\"sample\")\n            r0 = nuke.sample(sampler, \"red\", p0\[0], p0\[1], 1, 1)\n            g0 = nuke.sample(sampler, \"green\", p0\[0], p0\[1], 1, 1)\n            b0 = nuke.sample(sampler, \"blue\", p0\[0], p0\[1], 1, 1)\n\n        self.n\[\"pos0\"].setValue(r0, 0)\n        self.n\[\"pos0\"].setValue(g0, 1)\n        self.n\[\"pos0\"].setValue(b0, 2)\n\n        self.n\[\"pos1\"].setValue(r0+self.n\[\"range\"].getValue(), 0)\n        self.n\[\"pos1\"].setValue(g0, 1)\n        self.n\[\"pos1\"].setValue(b0+self.n\[\"range\"].getValue(), 2)\n        \n        # depth\n        camPos = \[]\n        with n:\n            info = nuke.toNode(\"cam_info\")\n            camPos = info\[\"pos\"].getValue()\n\n        self.pos0 = \[r0, g0, b0]\n        far = math.sqrt((self.pos0\[0] - camPos\[0])**2  +  (self.pos0\[1] - camPos\[1])**2  +  (self.pos0\[2] - camPos\[2])**2)\n        self.n\[\"near\"].setValue(0)\n        self.n\[\"far\"].setValue(far)\n\n\n    def point2(self):\n        self.sample()\n        self.calculate()\n\n\n    def sample(self):\n        p0 = self.n\[\"p0\"].getValue()\n        p1 = self.n\[\"p1\"].getValue()\n\n        with self.n:\n            sampler = nuke.toNode(\"sample\")\n\n            r1 = nuke.sample(sampler, \"red\", p1\[0], p1\[1], 1, 1)\n            g1 = nuke.sample(sampler, \"green\", p1\[0], p1\[1], 1, 1)\n            b1 = nuke.sample(sampler, \"blue\", p1\[0], p1\[1], 1, 1)\n\n            r0 = nuke.sample(sampler, \"red\", p0\[0], p0\[1], 1, 1)\n            g0 = nuke.sample(sampler, \"green\", p0\[0], p0\[1], 1, 1)\n            b0 = nuke.sample(sampler, \"blue\", p0\[0], p0\[1], 1, 1)\n\n        self.n\[\"pos0\"].setValue(r0, 0)\n        self.n\[\"pos0\"].setValue(g0, 1)\n        self.n\[\"pos0\"].setValue(b0, 2)\n\n        self.n\[\"pos1\"].setValue(r1, 0)\n        self.n\[\"pos1\"].setValue(g1, 1)\n        self.n\[\"pos1\"].setValue(b1, 2)\n\n        self.pos0 = \[r0, g0, b0]\n        self.pos1 = \[r1, g1, b1]\n\n\n    def calculate(self):\n        vector = \[self.pos1\[0]-self.pos0\[0] ,  self.pos1\[1]-self.pos0\[1], self.pos1\[2]-self.pos0\[2] ] \n        mag = math.sqrt(vector\[0]*vector\[0] + vector\[1]*vector\[1] + vector\[2]*vector\[2])\n        normalized = \[vector\[0] / mag, vector\[1] / mag, vector\[2] / mag]\n        direction = math.atan2(vector\[0] , vector\[2])\n\n        rotatedX = normalized\[0] * math.cos(direction) - normalized\[2] * math.sin(direction)\n        rotatedY = normalized\[1]\n        rotatedZ = normalized\[0] * math.sin(direction) + normalized\[2] * math.cos(direction)\n\n        angle = -math.atan2(rotatedY , rotatedZ)\n\n        self.n\[\"range\"].setValue(mag)\n        self.n\[\"rotatey0\"].setValue(math.degrees(direction))\n        self.n\[\"rotatex0\"].setValue(math.degrees(angle))\n\n        # depth\n        camPos = \[]\n        with n:\n            info = nuke.toNode(\"cam_info\")\n            camPos = info\[\"pos\"].getValue()\n\n        near = math.sqrt((self.pos0\[0] - camPos\[0])**2  +  (self.pos0\[1] - camPos\[1])**2  +  (self.pos0\[2] - camPos\[2])**2)\n        far = math.sqrt( (self.pos1\[0] - camPos\[0])**2  +  (self.pos1\[1] - camPos\[1])**2  +  (self.pos1\[2] - camPos\[2])**2)\n        self.n\[\"near\"].setValue(near)\n        self.n\[\"far\"].setValue(far)\n\n\ndef onDepth():\n    if n\[\"type\"].getValue() == 2:\n        n\[\"shape\"].setVisible(False)\n    else:\n        n\[\"shape\"].setVisible(True)\n\n\n\n\ndef onNotProjection():\n    n\[\"sharpness\"].setVisible(True)\n\n    if n\[\"type\"].getValue() == 2:\n        n\[\"type\"].setVisible(True)\n        n\[\"interpolation\"].setVisible(True)\n        n\[\"invert\"].setVisible(True)\n\n        n\[\"near\"].setVisible(True)\n        n\[\"far\"].setVisible(True)\n\n        n\[\"range\"].setVisible(False)\n        n\[\"rotatex0\"].setVisible(False)\n        n\[\"rotatey0\"].setVisible(False)\n        n\[\"sx\"].setVisible(False)\n        n\[\"sy\"].setVisible(False)\n        n\[\"sz\"].setVisible(False)\n        n\[\"tt\"].setVisible(False)\n\n        n\[\"ProjFrame\"].setVisible(False)\n        n\[\"setFrame_btn\"].setVisible(False)\n        n\[\"ortho\"].setVisible(False)\n        n\[\"scale\"].setVisible(False)\n        n\[\"normal\"].setVisible(False)\n\n    else:\n        n\[\"type\"].setVisible(True)\n        n\[\"interpolation\"].setVisible(True)\n        n\[\"invert\"].setVisible(True)\n\n        n\[\"near\"].setVisible(False)\n        n\[\"far\"].setVisible(False)\n\n        n\[\"range\"].setVisible(True)\n        n\[\"rotatex0\"].setVisible(True)\n        n\[\"rotatey0\"].setVisible(True)\n        n\[\"sx\"].setVisible(True)\n        n\[\"sy\"].setVisible(True)\n        n\[\"sz\"].setVisible(True)\n        n\[\"tt\"].setVisible(True)\n\n        n\[\"ProjFrame\"].setVisible(False)\n        n\[\"setFrame_btn\"].setVisible(False)\n        n\[\"ortho\"].setVisible(False)\n        n\[\"scale\"].setVisible(False)\n        n\[\"normal\"].setVisible(False)\n\n\n\n\nif k.name()==\"type\" or k.name()==\"ctrl\":\n    onNotProjection()\n    onDepth()\n\n\nif k.name()==\"inputChange\":\n    if this.inputs() > 1:\n        pannel = nuke.toNode(\"cam_info\")\n        nuke.show(pannel)\n\n\n\nif k.name()==\"interpolation\":\n    with n:\n        falloff = nuke.toNode(\"falloff\")\n        falloff\['type'].setValue(  int(n\['interpolation'].getValue()) )\n\n\nif k.name()==\"ctrl\":\n\n    if k.getValue() == 0:\n        n\[\"focal_point\"].setVisible(True)\n        n\['p0'].setVisible(False)\n        n\['p1'].setVisible(False)\n\n        if n\['p0'].getValue()\[0] != -1:\n            n\[\"focal_point\"].setValue(n\['p0'].getValue()\[0], 0)\n            n\[\"focal_point\"].setValue(n\['p0'].getValue()\[1], 1)\n\n            n\[\"old_p0\"].setValue(n\['p0'].getValue()\[0], 0)\n            n\[\"old_p0\"].setValue(n\['p0'].getValue()\[1], 1)\n            n\[\"old_p1\"].setValue(n\['p1'].getValue()\[0], 0)\n            n\[\"old_p1\"].setValue(n\['p1'].getValue()\[1], 1)\n        else:\n            n\[\"focal_point\"].setValue(n\['old_focal'].getValue()\[0], 0)\n            n\[\"focal_point\"].setValue(n\['old_focal'].getValue()\[1], 1)\n\n        n\[\"p0\"].setValue(-1, 0)\n        n\[\"p0\"].setValue(-1, 1)\n        n\[\"p1\"].setValue(-1, 0)\n        n\[\"p1\"].setValue(-1, 1)\n\n\n    if k.getValue() == 1:\n        n\[\"focal_point\"].setVisible(False)\n        n\['p0'].setVisible(True)\n        n\['p1'].setVisible(True)\n\n        n\[\"p0\"].setValue(n\['old_p0'].getValue()\[0], 0)\n        n\[\"p0\"].setValue(n\['old_p0'].getValue()\[1], 1)\n        n\[\"p1\"].setValue(n\['old_p1'].getValue()\[0], 0)\n        n\[\"p1\"].setValue(n\['old_p1'].getValue()\[1], 1)\n\n        if n\['focal_point'].getValue()\[0] != -1:\n            #\n            n\[\"p0\"].setValue(n\['focal_point'].getValue()\[0], 0)\n            n\[\"p0\"].setValue(n\['focal_point'].getValue()\[1], 1)\n            if n.input(1): # if cam is connected\n                with n:\n                    world_to_screen = nuke.toNode(\"world_to_screen\")\n                    xy = world_to_screen\['xy'].getValue()\n                    n\[\"p1\"].setValue(xy\[0], 0)\n                    n\[\"p1\"].setValue(xy\[1], 1)\n            else:\n                n\[\"p1\"].setValue(n\['old_p1'].getValue()\[0], 0)\n                n\[\"p1\"].setValue(n\['old_p1'].getValue()\[1], 1)\n                \n\n\n            n\[\"old_focal\"].setValue(n\['focal_point'].getValue()\[0], 0)\n            n\[\"old_focal\"].setValue(n\['focal_point'].getValue()\[1], 1)\n\n        n\[\"focal_point\"].setValue(-1, 0)\n        n\[\"focal_point\"].setValue(-1, 1)\n    \n\n    if k.getValue() == 2: # same as if k.getValue() == 1\n        n\[\"focal_point\"].setVisible(False)\n        n\['p0'].setVisible(False)\n        n\['p1'].setVisible(False)\n\n        if n\['p0'].getValue()\[0] != -1:\n            n\[\"focal_point\"].setValue(n\['p0'].getValue()\[0], 0)\n            n\[\"focal_point\"].setValue(n\['p0'].getValue()\[1], 1)\n\n            n\[\"old_p0\"].setValue(n\['p0'].getValue()\[0], 0)\n            n\[\"old_p0\"].setValue(n\['p0'].getValue()\[1], 1)\n            n\[\"old_p1\"].setValue(n\['p1'].getValue()\[0], 0)\n            n\[\"old_p1\"].setValue(n\['p1'].getValue()\[1], 1)\n        else:\n            n\[\"focal_point\"].setValue(n\['old_focal'].getValue()\[0], 0)\n            n\[\"focal_point\"].setValue(n\['old_focal'].getValue()\[1], 1)\n\n        n\[\"p0\"].setValue(-1, 0)\n        n\[\"p0\"].setValue(-1, 1)\n        n\[\"p1\"].setValue(-1, 0)\n        n\[\"p1\"].setValue(-1, 1)\n\n        #\n        n\['ProjFrame'].setValue(nuke.frame())\n\n        n\[\"type\"].setVisible(False)\n        n\[\"interpolation\"].setVisible(False)\n        n\[\"invert\"].setVisible(False)\n        n\[\"shape\"].setVisible(False)\n        n\[\"range\"].setVisible(False)\n        n\[\"rotatex0\"].setVisible(False)\n        n\[\"rotatey0\"].setVisible(False)\n        n\[\"sharpness\"].setVisible(False)\n        n\[\"sx\"].setVisible(False)\n        n\[\"sy\"].setVisible(False)\n        n\[\"sz\"].setVisible(False)\n        n\[\"tt\"].setVisible(False)\n        #\n        n\[\"ProjFrame\"].setVisible(True)\n        n\[\"setFrame_btn\"].setVisible(True)\n        n\[\"ortho\"].setVisible(True)\n        n\[\"scale\"].setVisible(True)\n        n\[\"normal\"].setVisible(True)\n\n        n\[\"near\"].setVisible(False)\n        n\[\"far\"].setVisible(False)\n\n\n\n    else:\n        onNotProjection()\n        onDepth()\n        # n\[\"type\"].setVisible(True)\n        # n\[\"interpolation\"].setVisible(True)\n        # n\[\"invert\"].setVisible(True)\n        # n\[\"mirror\"].setVisible(True)\n        # n\[\"range\"].setVisible(True)\n        # n\[\"rotatex0\"].setVisible(True)\n        # n\[\"rotatey0\"].setVisible(True)\n        # n\[\"sx\"].setVisible(True)\n        # n\[\"sy\"].setVisible(True)\n        # n\[\"sz\"].setVisible(True)\n        # n\[\"tt\"].setVisible(True)\n        # #\n        # n\[\"ProjFrame\"].setVisible(False)\n        # n\[\"setFrame_btn\"].setVisible(False)\n        # n\[\"ortho\"].setVisible(False)\n        # n\[\"scale\"].setVisible(False)\n\n\n\nprint(\"----------------------\")\nprint(k.name())\n# mask = Mask(n)\n\n"
+ tile_color 0x1411ff
+ note_font "Verdana Bold"
+ note_font_size 16
+ note_font_color 0xe5c6ff
+ selected true
+ xpos 247
+ ypos 216
+ addUserKnob {20 ctrltab l CTRL}
+ addUserKnob {22 sample_btn l "<font color='white'> Sample" T "import math\n#import numpy as np\n\n\n\nclass Mask():\n\n\n\n    def __init__(self, node):\n        #self.n = nuke.thisNode()\n        self.n = node\n        if self.n\[\"ctrl\"].getValue() == 0:\n            self.point1()\n        if self.n\[\"ctrl\"].getValue() == 1:\n            self.point2()\n        \n\n\n\n\n    def point1(self):\n        p0 = self.n\[\"focal_point\"].getValue()\n\n\n\n        with self.n:\n            sampler = nuke.toNode(\"sample\")\n            r0 = nuke.sample(sampler, \"red\", p0\[0], p0\[1], 1, 1)\n            g0 = nuke.sample(sampler, \"green\", p0\[0], p0\[1], 1, 1)\n            b0 = nuke.sample(sampler, \"blue\", p0\[0], p0\[1], 1, 1)\n\n\n\n        self.n\[\"pos0\"].setValue(r0, 0)\n        self.n\[\"pos0\"].setValue(g0, 1)\n        self.n\[\"pos0\"].setValue(b0, 2)\n\n\n\n        self.n\[\"pos1\"].setValue(r0+self.n\[\"range\"].getValue(), 0)\n        self.n\[\"pos1\"].setValue(g0, 1)\n        self.n\[\"pos1\"].setValue(b0+self.n\[\"range\"].getValue(), 2)\n        \n        # depth\n        camPos = \[]\n        with n:\n            info = nuke.toNode(\"cam_info\")\n            camPos = info\[\"pos\"].getValue()\n\n\n\n        self.pos0 = (r0, g0, b0)\n        far = math.sqrt((self.pos0\[0] - camPos\[0])**2  +  (self.pos0\[1] - camPos\[1])**2  +  (self.pos0\[2] - camPos\[2])**2)\n        #self.n\[\"near\"].setValue(0)\n        self.n\[\"far\"].setValue(far)\n\n\n\n\n    def point2(self):\n        self.sample()\n        self.calculate()\n\n\n\n\n    def sample(self):\n        p0 = self.n\[\"p0\"].getValue()\n        p1 = self.n\[\"p1\"].getValue()\n\n\n\n        with self.n:\n            sampler = nuke.toNode(\"sample\")\n\n\n\n            r1 = nuke.sample(sampler, \"red\", p1\[0], p1\[1], 1, 1)\n            g1 = nuke.sample(sampler, \"green\", p1\[0], p1\[1], 1, 1)\n            b1 = nuke.sample(sampler, \"blue\", p1\[0], p1\[1], 1, 1)\n\n\n\n            r0 = nuke.sample(sampler, \"red\", p0\[0], p0\[1], 1, 1)\n            g0 = nuke.sample(sampler, \"green\", p0\[0], p0\[1], 1, 1)\n            b0 = nuke.sample(sampler, \"blue\", p0\[0], p0\[1], 1, 1)\n\n\n\n        self.n\[\"pos0\"].setValue(r0, 0)\n        self.n\[\"pos0\"].setValue(g0, 1)\n        self.n\[\"pos0\"].setValue(b0, 2)\n\n\n\n        self.n\[\"pos1\"].setValue(r1, 0)\n        self.n\[\"pos1\"].setValue(g1, 1)\n        self.n\[\"pos1\"].setValue(b1, 2)\n\n\n\n        self.pos0 = \[r0, g0, b0]\n        self.pos1 = \[r1, g1, b1]\n\n\n\n\n    def calculate(self):\n        vector = \[self.pos1\[0]-self.pos0\[0] ,  self.pos1\[1]-self.pos0\[1], self.pos1\[2]-self.pos0\[2] ] \n        mag = math.sqrt(vector\[0]*vector\[0] + vector\[1]*vector\[1] + vector\[2]*vector\[2])\n        normalized = \[vector\[0] / mag, vector\[1] / mag, vector\[2] / mag]\n        direction = math.atan2(vector\[0] , vector\[2])\n\n\n\n        rotatedX = normalized\[0] * math.cos(direction) - normalized\[2] * math.sin(direction)\n        rotatedY = normalized\[1]\n        rotatedZ = normalized\[0] * math.sin(direction) + normalized\[2] * math.cos(direction)\n\n\n\n        angle = -math.atan2(rotatedY , rotatedZ)\n\n\n\n        self.n\[\"range\"].setValue(mag)\n        self.n\[\"rotatey0\"].setValue(math.degrees(direction))\n        self.n\[\"rotatex0\"].setValue(math.degrees(angle))\n\n\n\n        # depth\n        camPos = \[]\n        with n:\n            info = nuke.toNode(\"cam_info\")\n            camPos = info\[\"pos\"].getValue()\n\n\n\n        near = math.sqrt((self.pos0\[0] - camPos\[0])**2  +  (self.pos0\[1] - camPos\[1])**2  +  (self.pos0\[2] - camPos\[2])**2)\n        far = math.sqrt( (self.pos1\[0] - camPos\[0])**2  +  (self.pos1\[1] - camPos\[1])**2  +  (self.pos1\[2] - camPos\[2])**2)\n        self.n\[\"near\"].setValue(near)\n        self.n\[\"far\"].setValue(far)\n\n\n\n\nmask = Mask(nuke.thisNode())\n\n\n\n\n\n\n\n\n\n\n\n\n" +STARTLINE}
+ addUserKnob {41 in l Space T Shuffle2.in}
+ addUserKnob {26 ""}
+ addUserKnob {4 ctrl l Controller M {"1 Point" "2 Points" Projection "" "" "" ""}}
+ ctrl "2 Points"
+ addUserKnob {4 type l "Mask Type" M {Directional Spherical "Z Depth" Cylindrical Slit Cube "" "" "" "" "" "" "" "" "" ""}}
+ type Spherical
+ addUserKnob {26 text_6 l "  " -STARTLINE T "  "}
+ addUserKnob {4 interpolation l Falloff -STARTLINE M {linear plinear smooth0 smooth1 smooth}}
+ addUserKnob {26 text_4 l "  " -STARTLINE T "  "}
+ addUserKnob {6 invert l "Invert    " -STARTLINE}
+ addUserKnob {6 shape l "View 3D Shape" -STARTLINE}
+ addUserKnob {3 ProjFrame l " Projection Frame" +HIDDEN}
+ ProjFrame 1021
+ addUserKnob {22 setFrame_btn l "Set to Current Frame" -STARTLINE +HIDDEN T "import nuke \n\nfrm = str(nuke.frame()) \nthis = nuke.thisNode()\n\nthis\['ProjFrame'].setValue(nuke.frame())\n"}
+ addUserKnob {6 ortho l Orthographic +HIDDEN +STARTLINE}
+ ortho true
+ addUserKnob {7 scale l "Image Scale" +HIDDEN R 0 10}
+ scale 1
+ addUserKnob {7 normal l "Mask by Normal Z" +HIDDEN}
+ normal 0.8
+ addUserKnob {26 text_2 l " " T " "}
+ addUserKnob {7 near +HIDDEN R 0 10000}
+ near 4.670382972
+ addUserKnob {7 far +HIDDEN R 0 10000}
+ far 3.905114994
+ addUserKnob {7 range l Range R 0 3000}
+ range 1.500999584
+ addUserKnob {7 sharpness l Shapeness}
+ addUserKnob {7 rotatey0 l Direction R -180 180}
+ rotatey0 115.3541752
+ addUserKnob {7 rotatex0 l Angle R -90 90}
+ addUserKnob {26 ""}
+ addUserKnob {7 sx l "Scale X"}
+ sx 1
+ addUserKnob {7 sy l "Scale Y"}
+ sy 1
+ addUserKnob {7 sz l "Scale Z"}
+ sz 1
+ addUserKnob {13 tt l Offset}
+ addUserKnob {26 ""}
+ addUserKnob {6 erode l "Fix Edges" t "erodes in and out" +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {26 text_3 l " " T " "}
+ addUserKnob {26 text l "<font color='black'>Input 2D</font>"}
+ addUserKnob {41 focal_point l "focal point" T point.focal_point}
+ addUserKnob {41 p0 l "point 0" T ramp.p0}
+ addUserKnob {41 p1 l "point 1" T ramp.p1}
+ addUserKnob {20 info l "Extracted Info"}
+ addUserKnob {13 vector}
+ vector {{"pos1.x - pos0.x"} {"pos1.y - pos0.y"} {"pos1.z - pos0.z"}}
+ addUserKnob {13 normalized}
+ normalized {{"vector / mag"} {"vector / mag"} {"vector / mag"}}
+ addUserKnob {13 rotated l "rotated vector"}
+ rotated {{"normalized.x * cos(direction) - normalized.z * sin(direction)"} {normalized} {"normalized.x * sin(direction) + normalized.z * cos(direction)"}}
+ addUserKnob {7 mag l distance}
+ mag {{"sqrt( (pos1.x - pos0.x)**2 + (pos1.y - pos0.y)**2 + (pos1.z - pos0.z)**2  )"}}
+ addUserKnob {7 vx l "vector x"}
+ vx {{"pos1.x - pos0.x"}}
+ addUserKnob {7 vy l "vector y"}
+ vy {{"pos1.y - pos0.y"}}
+ addUserKnob {7 vz l "vector z"}
+ vz {{"pos1.z - pos0.z"}}
+ addUserKnob {7 rotatex l "rotate X"}
+ rotatex {{degrees(angle)}}
+ addUserKnob {7 rotatey l "rotate Y"}
+ rotatey {{degrees(direction)}}
+ addUserKnob {7 angle l "angle x"}
+ angle {{"-atan2(rotated.y , rotated.z)"}}
+ addUserKnob {7 direction l "direction y"}
+ direction {{"atan2(pos1.x - pos0.x , pos1.z - pos0.z)"}}
+ addUserKnob {30 old_focal l focal +INVISIBLE}
+ old_focal {647 220}
+ addUserKnob {30 old_p0 l p0 +INVISIBLE}
+ old_p0 {442 238}
+ addUserKnob {30 old_p1 l p1 +INVISIBLE}
+ old_p1 {1006 132}
+ addUserKnob {26 text_1 l "<font color='black'>Output 3D</font>"}
+ addUserKnob {13 pos0}
+ pos0 {-2.134150028 0 -0.9409490824}
+ addUserKnob {13 pos1}
+ pos1 {-0.7777296305 0 -1.583695889}
+ addUserKnob {26 ""}
+ addUserKnob {6 color_rgb_panelDropped l "panel dropped state" +HIDDEN +STARTLINE}
+ addUserKnob {20 Flags l " "}
+ addUserKnob {26 gizmo -STARTLINE T 018}
+ addUserKnob {26 text_5 l creator: +INVISIBLE T "MJ Alajmi\nmalajmi650@gmail.com"}
+}
+ BackdropNode {
+  inputs 0
+  name BackdropNode1
+  tile_color 0x654177ff
+  label "Rotate P X"
+  note_font_size 31
+  xpos 15
+  ypos -114
+  bdwidth 443
+  bdheight 222
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode10
+  tile_color 0x2d2020ff
+  label "Edge Fix\n"
+  note_font_size 51
+  xpos 70
+  ypos 4085
+  bdwidth 574
+  bdheight 497
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode11
+  tile_color 0x29142cff
+  label "View Shape"
+  note_font_size 41
+  xpos -2167
+  ypos 5162
+  bdwidth 1771
+  bdheight 1044
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode12
+  tile_color 0x19192aff
+  label Projection
+  note_font_size 51
+  xpos 1988
+  ypos 2661
+  bdwidth 1469
+  bdheight 1184
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode13
+  tile_color 0x43442dff
+  label "Slit Mask"
+  note_font_size 31
+  xpos -1539
+  ypos 623
+  bdwidth 343
+  bdheight 575
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode14
+  tile_color 0x4c2c5bff
+  label "Cylindrical Mask\n"
+  note_font_size 31
+  xpos -995
+  ypos 619
+  bdwidth 308
+  bdheight 314
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode15
+  tile_color 0x4f0f13ff
+  label "Masking by Surface Normal"
+  note_font_size 41
+  xpos 2084
+  ypos 2816
+  bdwidth 843
+  bdheight 999
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode16
+  tile_color 0x512b47ff
+  label Interpolation
+  note_font_size 50
+  xpos -92
+  ypos 3024
+  bdwidth 469
+  bdheight 328
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode17
+  tile_color 0x9413bff
+  label Invert
+  note_font_size 50
+  xpos 95
+  ypos 2414
+  bdwidth 463
+  bdheight 365
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode18
+  tile_color 0x19594fff
+  label "Relative Translate\n"
+  note_font_size 31
+  xpos 42
+  ypos -897
+  bdwidth 400
+  bdheight 229
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode19
+  tile_color 0x19594fff
+  label "Relative Scale"
+  note_font_size 31
+  xpos 42
+  ypos 204
+  bdwidth 400
+  bdheight 229
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode2
+  tile_color 0x213f56ff
+  label "Directional Mask\n"
+  note_font_size 31
+  xpos 48
+  ypos 612
+  bdwidth 378
+  bdheight 317
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode20
+  tile_color 0x19594fff
+  label "Relative Scale"
+  note_font_size 31
+  xpos -1570
+  ypos 215
+  bdwidth 400
+  bdheight 229
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode21
+  tile_color 0x4f3624ff
+  xpos 744
+  ypos 623
+  bdwidth 461
+  bdheight 468
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode22
+  tile_color 0x604634ff
+  label Sharpness
+  note_font_size 40
+  xpos 48
+  ypos 1936
+  bdwidth 350
+  bdheight 213
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode3
+  tile_color 0x654177ff
+  label "Rotate P Y\n"
+  note_font_size 31
+  xpos 16
+  ypos -488
+  bdwidth 443
+  bdheight 222
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode4
+  tile_color 0x542f31ff
+  label "Spherical Mask\n"
+  note_font_size 31
+  xpos -466
+  ypos 620
+  bdwidth 337
+  bdheight 308
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode5
+  tile_color 0x654177ff
+  label "Offset P\n"
+  note_font_size 31
+  xpos 127
+  ypos -1192
+  bdwidth 218
+  bdheight 158
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode6
+  tile_color 0x654177ff
+  label "Rotate P X"
+  note_font_size 31
+  xpos -1592
+  ypos -119
+  bdwidth 443
+  bdheight 222
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode7
+  tile_color 0x221922ff
+  label "Backup Camera"
+  note_font_size 21
+  xpos -280
+  ypos -2390
+  bdwidth 220
+  bdheight 224
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode8
+  tile_color 0x2c1e7cff
+  label "Z Depth\n"
+  note_font_size 51
+  xpos 1581
+  ypos 641
+  bdwidth 265
+  bdheight 362
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode9
+  tile_color 0x272727ff
+  label Data
+  note_font_size 51
+  xpos -469
+  ypos -2076
+  bdwidth 426
+  bdheight 249
+ }
+ BackdropNode {
+  inputs 0
+  name Bd
+  tile_color 0x1a1f1aff
+  label "Sample P"
+  note_font_size 31
+  note_font_color 0xf2a0ff
+  xpos 389
+  ypos -2087
+  bdwidth 350
+  bdheight 249
+ }
+ Input {
+  inputs 0
+  name Float
+  tile_color 0xffff00ff
+  note_font_size 31
+  xpos 188
+  ypos -2683
+ }
+ Remove {
+  operation keep
+  channels P
+  channels2 {-N.red -N.green -N.blue none}
+  name Remove1
+  xpos 188
+  ypos -2545
+ }
+ Dot {
+  name Dot47
+  xpos 222
+  ypos -2443
+ }
+set N74ace800 [stack 0]
+ Shuffle {
+  in P
+  name Shuffle2
+  label "\[value in 1]"
+  xpos 188
+  ypos -1994
+ }
+set N74acec00 [stack 0]
+ NoOp {
+  name sample
+  xpos 439
+  ypos -1988
+ }
+set N74acf000 [stack 0]
+ Dot {
+  name Dot48
+  xpos 611
+  ypos -1985
+ }
+ ZDefocus2 {
+  channels none
+  fill_foreground false
+  focal_point {-1 -1}
+  size 1
+  max_size 1
+  legacy_resize_mode false
+  show_legacy_resize_mode false
+  name point
+  xpos 577
+  ypos -1914
+ }
+push $N74acf000
+ Ramp {
+  output none
+  p0 {676 344}
+  p1 {1324 256}
+  name ramp
+  xpos 439
+  ypos -1914
+ }
+ NoOp {
+  inputs 0
+  name world_to_screen
+  xpos -392
+  ypos -1919
+  addUserKnob {20 User}
+  addUserKnob {13 position_3d_1 l "vector Z"}
+  position_3d_1 {0 0 1}
+  addUserKnob {13 position_3d_7 l "p0 rotate y"}
+  position_3d_7 {{"position_3d_1.x * cos(radians(parent.rotatey0)) - position_3d_1.z * sin(radians(parent.rotatey0))"} {position_3d_1.y} {"position_3d_1.x  * sin(radians(parent.rotatey0)) + position_3d_1.z  * cos(radians(parent.rotatey0))"}}
+  addUserKnob {13 position_3d_8 l "p0 rotate x"}
+  position_3d_8 {{position_3d_7.x} {"position_3d_7.z * sin(radians(parent.rotatex0)) + position_3d_7.y * cos(radians(parent.rotatex0))"} {"position_3d_7.z * cos(radians(parent.rotatex0)) - position_3d_7.y * sin(radians(parent.rotatex0))"}}
+  addUserKnob {13 position_3d_10 l "mutl by mag"}
+  position_3d_10 {{"position_3d_8.x * parent.range"} {"position_3d_8.y * parent.range"} {"position_3d_8.z * parent.range"}}
+  addUserKnob {13 position_3d_6 l "p1 pos 3d"}
+  position_3d_6 {{"-(position_3d_10.x - parent.pos0)"} {"-(position_3d_10.y - parent.pos0.y)"} {"(position_3d_10.z + parent.pos0.z)"}}
+  addUserKnob {13 position_3d l "offset by cam"}
+  position_3d {{"position_3d_6.x -  cam_info.pos.x"} {"position_3d_6.y -  cam_info.pos.y"} {"position_3d_6.z - cam_info.pos.z"}}
+  addUserKnob {13 position_3d_3 l "rotate z"}
+  position_3d_3 {{"position_3d.x * cos(radians( -cam_info.rot.z) )          -           position_3d.y           *   sin(radians( -cam_info.rot.z) )"} {"position_3d.x * -sin(radians( -cam_info.rot.z) )                  -      position_3d.y    *  cos(radians( -cam_info.rot.z) )"} {position_3d.z}}
+  addUserKnob {13 position_3d_2 l "rotate y"}
+  position_3d_2 {{"position_3d_3.x * cos(radians( -cam_info.rot.y) )       - position_3d_3.z *  -sin(radians( -cam_info.rot.y) )"} {position_3d_3.y} {"position_3d_3.x * -sin(radians( -cam_info.rot.y) )       +      position_3d_3.z*  cos(radians( -cam_info.rot.y) ) "}}
+  addUserKnob {13 position_3d_4 l "rotate x"}
+  position_3d_4 {{position_3d_2.x} {"position_3d_2.y * -cos(radians( -cam_info.rot.x) )     +    position_3d_2.z    *  -sin(radians( -cam_info.rot.x) )"} {"position_3d_2.y *  -sin(radians( -cam_info.rot.x) )                     +          position_3d_2.z     *  cos(radians( -cam_info.rot.x) )"}}
+  addUserKnob {13 position_3d_5 l "to screen"}
+  position_3d_5 {{"position_3d_4.x  * 1/tan ( atan((cam_info.haperture)/ (cam_info.focal / (1)))  )"} {"position_3d_4.y * 1/tan ( atan((cam_info.haperture)/ (cam_info.focal / (1)))  )"} {"position_3d_4.z * - ( (cam_info.far + cam_info.near) / (cam_info.far - cam_info.near)    )"}}
+  addUserKnob {12 position_2d}
+  position_2d {{"position_3d_5.x / position_3d_5.z"} {"position_3d_5.y / position_3d_5.z"}}
+  addUserKnob {12 xy l final}
+  xy {{"isnan(position_2d.x)? parent.old_p1 :  ((position_2d.x) +1/2)* width"} {"isnan(position_2d.y)? parent.old_p1 :  ((position_2d.y * (width/height)) +1/2) * height "}}
+ }
+ Input {
+  inputs 0
+  name cam
+  tile_color 0xffff00ff
+  note_font_size 31
+  xpos -216
+  ypos -2684
+  number 1
+ }
+set N6d7b4400 [stack 0]
+ Dot {
+  name Dot26
+  tile_color 0xffff00ff
+  xpos -2064
+  ypos 5662
+  hide_input true
+ }
+set N6d7b4800 [stack 0]
+ Cube {
+  inputs 0
+  render_mode textured+wireframe
+  rows 2
+  columns 2
+  cube {-1 -1 -1 1 1 1}
+  translate {{parent.offsetP.add} {parent.offsetP.add} {parent.offsetP.add}}
+  rotate {{parent.rotatex0} {parent.rotatey0} 0}
+  scaling {{parent.sx} {parent.sy} {parent.sz}}
+  uniform_scale {{parent.range}}
+  name Cube1
+  xpos -1864
+  ypos 5336
+ }
+ TransformGeo {
+  translate {{parent.Grade1.add.r} {parent.Grade1.add.g} {parent.Grade1.add.b}}
+  name TransformGeo9
+  xpos -1864
+  ypos 5426
+ }
+push 0
+ ScanlineRender {
+  inputs 3
+  conservative_shader_sampling false
+  motion_vectors_type distance
+  name ScanlineRender7
+  xpos -1864
+  ypos 5659
+ }
+ Grade {
+  white {0.016 0.515 1 1}
+  white_panelDropped true
+  name Grade16
+  xpos -1864
+  ypos 5754
+ }
+ Dot {
+  name Dot61
+  xpos -1830
+  ypos 6103
+ }
+ Dot {
+  name Dot58
+  tile_color 0x33ff3301
+  xpos -1041
+  ypos 6103
+ }
+push $N6d7b4800
+ Card2 {
+  inputs 0
+  render_mode textured+wireframe
+  rows 2
+  rotate {{parent.rotatex0} {"parent.rotatey0 + 90"} 0}
+  scaling {{parent.sx} 0.2 {parent.sz}}
+  uniform_scale 2000
+  pivot_translate {0 0 {"- parent.range / uniform_scale"}}
+  control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+  name Card3
+  xpos -1535
+  ypos 5335
+ }
+ TransformGeo {
+  translate {{"parent.offsetP.add "} {parent.offsetP.add} {parent.offsetP.add}}
+  name TransformGeo7
+  xpos -1535
+  ypos 5425
+ }
+ TransformGeo {
+  translate {{parent.Grade1.add.r} {parent.Grade1.add.g} {parent.Grade1.add.b}}
+  name TransformGeo5
+  xpos -1535
+  ypos 5580
+ }
+push 0
+ ScanlineRender {
+  inputs 3
+  conservative_shader_sampling false
+  motion_vectors_type distance
+  name ScanlineRender5
+  xpos -1535
+  ypos 5659
+ }
+ Grade {
+  white {0.016 0.515 1 1}
+  white_panelDropped true
+  multiply 2.03
+  name Grade12
+  xpos -1535
+  ypos 5749
+ }
+push $N6d7b4800
+ Card2 {
+  inputs 0
+  render_mode textured+wireframe
+  rows 2
+  rotate {{parent.rotatex0} {"parent.rotatey0 +  90"} 0}
+  scaling {{parent.sx} 0.2 {parent.sz}}
+  uniform_scale 2000
+  pivot_translate {0 0 {"parent.range / uniform_scale"}}
+  control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+  name Card4
+  xpos -1656
+  ypos 5333
+ }
+ TransformGeo {
+  translate {{"parent.offsetP.add "} {parent.offsetP.add} {"parent.offsetP.add   "}}
+  name TransformGeo8
+  xpos -1656
+  ypos 5423
+ }
+ TransformGeo {
+  translate {{parent.Grade1.add.r} {parent.Grade1.add.g} {parent.Grade1.add.b}}
+  name TransformGeo6
+  xpos -1656
+  ypos 5583
+ }
+push 0
+ ScanlineRender {
+  inputs 3
+  conservative_shader_sampling false
+  motion_vectors_type distance
+  name ScanlineRender6
+  xpos -1656
+  ypos 5659
+ }
+ Grade {
+  white {0.97 0.515 0.205 1}
+  white_panelDropped true
+  multiply 2.03
+  name Grade13
+  xpos -1656
+  ypos 5749
+ }
+ Merge2 {
+  inputs 2
+  mix 0.798
+  name Merge2
+  xpos -1594
+  ypos 5810
+ }
+ Dot {
+  name Dot38
+  xpos -1560
+  ypos 6064
+ }
+ Dot {
+  name Dot27
+  tile_color 0x33ff3301
+  xpos -1035
+  ypos 6064
+ }
+push $N6d7b4800
+ Cylinder {
+  inputs 0
+  render_mode textured+wireframe
+  radius {{parent.range}}
+  height 20000
+  translate {{parent.offsetP.add} {parent.offsetP.add} {parent.offsetP.add}}
+  rotate {{parent.rotatex0} {parent.rotatey0} 0}
+  scaling {{parent.sx} {parent.sy} {parent.sz}}
+  name Cylinder1
+  xpos -1348
+  ypos 5335
+ }
+ TransformGeo {
+  translate {{parent.Grade1.add.r} {parent.Grade1.add.g} {parent.Grade1.add.b}}
+  name TransformGeo4
+  xpos -1348
+  ypos 5581
+ }
+push 0
+ ScanlineRender {
+  inputs 3
+  conservative_shader_sampling false
+  motion_vectors_type distance
+  name ScanlineRender4
+  xpos -1348
+  ypos 5659
+ }
+ Grade {
+  white {0.016 0.515 1 1}
+  white_panelDropped true
+  name Grade11
+  xpos -1348
+  ypos 5749
+ }
+ Dot {
+  name Dot39
+  xpos -1314
+  ypos 6013
+ }
+ Dot {
+  name Dot28
+  tile_color 0x33ff3301
+  xpos -1022
+  ypos 6013
+ }
+push 0
+push $N6d7b4800
+ Sphere {
+  inputs 0
+  render_mode textured+wireframe
+  cast_shadow false
+  receive_shadow false
+  rows 20
+  radius {{parent.range}}
+  translate {{parent.offsetP.add} {parent.offsetP.add} {parent.offsetP.add}}
+  rotate {{parent.rotatex0} {parent.rotatey0} 0}
+  scaling {{parent.sx} {parent.sy} {parent.sz}}
+  name Sphere1
+  xpos -1162
+  ypos 5333
+ }
+ TransformGeo {
+  translate {{parent.Grade1.add.r} {parent.Grade1.add.g} {parent.Grade1.add.b}}
+  name TransformGeo3
+  xpos -1162
+  ypos 5578
+ }
+push 0
+ ScanlineRender {
+  inputs 3
+  conservative_shader_sampling false
+  motion_vectors_type distance
+  name ScanlineRender3
+  xpos -1162
+  ypos 5659
+ }
+ Grade {
+  white {0.016 0.515 1 1}
+  white_panelDropped true
+  multiply 0.5
+  name Grade10
+  xpos -1162
+  ypos 5747
+ }
+ Dot {
+  name Dot40
+  xpos -1128
+  ypos 5964
+ }
+ Dot {
+  name Dot29
+  tile_color 0x33ff3301
+  xpos -980
+  ypos 5964
+ }
+push $N6d7b4800
+ Card2 {
+  inputs 0
+  render_mode textured+wireframe
+  rows 2
+  translate {{parent.offsetP.add} {parent.offsetP.add} {parent.offsetP.add}}
+  rotate {{parent.rotatex0} {parent.rotatey0} 0}
+  scaling {{parent.sx} 0.2 {parent.sz}}
+  uniform_scale 2000
+  control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+  name Card1
+  xpos -881
+  ypos 5334
+ }
+ TransformGeo {
+  translate {{parent.Grade1.add.r} {parent.Grade1.add.g} {parent.Grade1.add.b}}
+  name TransformGeo1
+  xpos -881
+  ypos 5579
+ }
+push 0
+ ScanlineRender {
+  inputs 3
+  conservative_shader_sampling false
+  motion_vectors_type distance
+  name ScanlineRender1
+  xpos -881
+  ypos 5659
+ }
+ Grade {
+  white {0.016 0.515 1 1}
+  white_panelDropped true
+  multiply 2.03
+  name Grade8
+  xpos -881
+  ypos 5749
+ }
+push $N6d7b4800
+ Card2 {
+  inputs 0
+  render_mode textured+wireframe
+  rows 2
+  translate {{parent.offsetP.add} {parent.offsetP.add} {"parent.offsetP.add "}}
+  rotate {{parent.rotatex0} {parent.rotatey0} 0}
+  scaling {{parent.sx} 0.2 {parent.sz}}
+  uniform_scale 2000
+  pivot_translate {0 0 {"- parent.range / 2000"}}
+  control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+  name Card2
+  xpos -1002
+  ypos 5334
+ }
+ TransformGeo {
+  translate {{parent.Grade1.add.r} {parent.Grade1.add.g} {parent.Grade1.add.b}}
+  name TransformGeo2
+  xpos -1002
+  ypos 5584
+ }
+push 0
+ ScanlineRender {
+  inputs 3
+  conservative_shader_sampling false
+  motion_vectors_type distance
+  name ScanlineRender2
+  xpos -1002
+  ypos 5659
+ }
+ Grade {
+  white {0.97 0.515 0.205 1}
+  white_panelDropped true
+  multiply 1.99
+  name Grade9
+  xpos -1002
+  ypos 5749
+ }
+ Merge2 {
+  inputs 2
+  mix 0.808
+  name Merge3
+  xpos -941
+  ypos 5812
+ }
+ Dot {
+  name Dot37
+  tile_color 0x33ff3301
+  xpos -907
+  ypos 5942
+ }
+ Switch {
+  inputs 6
+  which {{parent.type}}
+  name Switch6
+  tile_color 0x33ff3301
+  xpos -941
+  ypos 6100
+ }
+ BasicMaterial {
+  inputs 0
+  diffuse {1 0 0}
+  diffuse_panelDropped true
+  specular {0 0.8 0}
+  specular_panelDropped true
+  name BasicMaterial1
+  xpos 2141
+  ypos 3098
+ }
+push $N6d7b4400
+ Dot {
+  name Dot51
+  xpos 2375
+  ypos 2909
+  hide_input true
+ }
+ Camera2 {
+  inputs 0
+  translate {241.9999847 1009.994995 -329.9999695}
+  rotate {0 90 0}
+  focal 33.4
+  name Camera1
+  xpos -203
+  ypos -2302
+ }
+set N6db5dc00 [stack 0]
+ Dot {
+  name Dot50
+  xpos 2508
+  ypos 2971
+  hide_input true
+ }
+ Switch {
+  inputs 2
+  which {{"\[exists parent.input1]"}}
+  name Switch9
+  xpos 2341
+  ypos 2968
+ }
+ Light {
+  inputs 0
+  translate {{parent.cam_info.pos.x} {parent.cam_info.pos.y} {parent.cam_info.pos.z}}
+  depthmap_slope_bias 0.01
+  name Point1
+  xpos 2204
+  ypos 2964
+ }
+push $N74ace800
+ Dot {
+  name Dot49
+  xpos 2501
+  ypos 3101
+  hide_input true
+ }
+ ReLight {
+  inputs 4
+  normal N
+  position P
+  name ReLight1
+  xpos 2341
+  ypos 3098
+ }
+ Shuffle {
+  green red
+  blue red
+  alpha red
+  name Shuffle3
+  label "\[value in 1]"
+  xpos 2341
+  ypos 3188
+ }
+ Dot {
+  name Dot52
+  xpos 2375
+  ypos 3319
+ }
+ Dot {
+  name Dot55
+  tile_color 0x33ff3301
+  xpos 2575
+  ypos 3319
+ }
+push $N74acec00
+ Dot {
+  name Dot8
+  xpos 222
+  ypos -1462
+ }
+set N6dbf6000 [stack 0]
+ Dot {
+  name Dot9
+  xpos 1706
+  ypos -1462
+ }
+set N6dbf6400 [stack 0]
+ Dot {
+  name Dot14
+  xpos 3282
+  ypos -1462
+ }
+ Grade {
+  add {{cam_info.pos.x(parent.ProjFrame)} {cam_info.pos.y(parent.ProjFrame)} {cam_info.pos.z(parent.ProjFrame)} 0}
+  reverse true
+  black_clamp false
+  name translate_pp
+  xpos 3248
+  ypos 2790
+ }
+ ColorMatrix {
+  channels all
+  matrix {
+      {{"cos(radians( -cam_info.rot.z(parent.ProjFrame)) ) "} {"-sin(radians( - cam_info.rot.z(parent.ProjFrame)) ) "} 0}
+      {{"sin(radians( -cam_info.rot.z(parent.ProjFrame)) ) "} {"cos(radians( -cam_info.rot.z(parent.ProjFrame)) )"} 0}
+      {0 0 1}
+    }
+  name rotate_ppZ
+  xpos 3248
+  ypos 2868
+ }
+ ColorMatrix {
+  channels all
+  matrix {
+      {{"cos(radians( -cam_info.rot.y(parent.ProjFrame)) ) "} 0 {"sin(radians( -cam_info.rot.y(parent.ProjFrame)) )"}}
+      {0 1 0}
+      {{"-sin(radians( -cam_info.rot.y(parent.ProjFrame)) ) "} 0 {"cos(radians( -cam_info.rot.y(parent.ProjFrame)) ) "}}
+    }
+  name rotate_ppY
+  xpos 3248
+  ypos 2948
+ }
+ ColorMatrix {
+  channels all
+  matrix {
+      {1 0 0}
+      {0 {"cos(radians( -cam_info.rot.x(parent.ProjFrame)) ) "} {"-sin(radians( -cam_info.rot.x(parent.ProjFrame)) ) "}}
+      {0 {"sin(radians( -cam_info.rot.x(parent.ProjFrame)) ) "} {"cos(radians( -cam_info.rot.x(parent.ProjFrame)) ) "}}
+    }
+  name rotate_ppX
+  xpos 3248
+  ypos 3030
+ }
+set N6dbf7800 [stack 0]
+ Dot {
+  name Dot46
+  xpos 2705
+  ypos 3039
+ }
+ Shuffle {
+  in N
+  red blue
+  green blue
+  alpha blue
+  name Shuffle1
+  label "\[value in 1]"
+  xpos 2671
+  ypos 3092
+ }
+ Dot {
+  name Dot54
+  tile_color 0x33ff3301
+  xpos 2705
+  ypos 3222
+ }
+ Switch {
+  inputs 2
+  which {{!parent.ortho}}
+  name Switch10
+  tile_color 0x33ff3301
+  xpos 2671
+  ypos 3316
+ }
+ Grade {
+  channels rgba
+  whitepoint {{parent.normal}}
+  name Grade14
+  xpos 2671
+  ypos 3406
+ }
+push $N6dbf7800
+ Dot {
+  name Dot2
+  xpos 3282
+  ypos 3100
+ }
+ ColorMatrix {
+  channels all
+  matrix {
+      {{"1/tan ( atan((cam_info.haperture(parent.ProjFrame))/ (cam_info.focal(parent.ProjFrame) / (parent.scale)))  )"} 0 0}
+      {0 {"matrix.0*1 "} 0}
+      {0 0 {"- ( (cam_info.far(parent.ProjFrame) + cam_info.near(parent.ProjFrame)) / (cam_info.far(parent.ProjFrame) - cam_info.near(parent.ProjFrame))    ) "}}
+    }
+  name ColorMatrix1
+  xpos 3248
+  ypos 3140
+ }
+set N6dc21400 [stack 0]
+ Dot {
+  name Dot45
+  xpos 3148
+  ypos 3149
+ }
+ Expression {
+  channel0 alpha
+  expr0 b>0
+  name Expression8
+  xpos 3114
+  ypos 3312
+ }
+push $N6dc21400
+ Expression {
+  expr0 "r/b "
+  expr1 "g/b "
+  channel2 {-rgba.red -rgba.green rgba.blue none}
+  expr2 b/b
+  channel3 alpha
+  expr3 b>0
+  name Expression11
+  xpos 3248
+  ypos 3226
+  disable {{parent.ortho}}
+ }
+ Grade {
+  multiply 1000
+  reverse true
+  black_clamp false
+  name Grade6
+  xpos 3248
+  ypos 3316
+  disable {{!parent.ortho}}
+ }
+ Expression {
+  temp_name0 image_width
+  temp_expr0 image_info.uv.u
+  temp_name1 image_height
+  temp_expr1 image_info.uv.v
+  channel0 {-rgba.red -rgba.green -rgba.blue none}
+  expr1 "g* image_width/image_height"
+  name Expression1
+  xpos 3248
+  ypos 3406
+ }
+ Expression {
+  expr0 r+1/2
+  expr1 g+1/2
+  name Expression6
+  xpos 3248
+  ypos 3479
+ }
+ Expression {
+  expr0 "r>0 ? r%1 : 1-(abs(r)%1)"
+  expr1 "g>0 ? g%1 : 1-(abs(g)%1)"
+  name Expression7
+  xpos 3248
+  ypos 3557
+  disable {{!parent.ortho}}
+ }
+ Input {
+  inputs 0
+  name to_project
+  tile_color 0xffff00ff
+  note_font_size 31
+  xpos 3681
+  ypos 3499
+  number 2
+ }
+ NoOp {
+  name image_info
+  xpos 3681
+  ypos 3611
+  addUserKnob {20 User}
+  addUserKnob {30 uv l ratio}
+  uv {{width} {height}}
+ }
+ Dot {
+  name Dot11
+  xpos 3715
+  ypos 3701
+ }
+ STMap {
+  inputs 2
+  uv rgb
+  name STMap2
+  xpos 3248
+  ypos 3692
+ }
+ Multiply {
+  inputs 1+1
+  value 0
+  invert_mask true
+  name Multiply1
+  xpos 3114
+  ypos 3692
+  disable {{parent.ortho}}
+ }
+ Multiply {
+  inputs 1+1
+  value 0
+  invert_mask true
+  name Multiply2
+  xpos 2671
+  ypos 3692
+  disable {{parent.normal==0}}
+ }
+ Dot {
+  name Dot6
+  tile_color 0x33ff3301
+  xpos 331
+  ypos 3701
+ }
+push $N6dbf6000
+ Grade {
+  add {{parent.pos0} {parent.pos0} {parent.pos0} {parent.pos0}}
+  reverse true
+  black_clamp false
+  name offsetP
+  xpos 188
+  ypos -1127
+ }
+ Grade {
+  add {{parent.tt.x} {parent.tt.y} {parent.tt.z} 0}
+  reverse true
+  black_clamp false
+  name Grade1
+  xpos 188
+  ypos -738
+ }
+ Expression {
+  temp_name0 ang
+  temp_expr0 radians(parent.rotatey0)
+  temp_expr2 radians(parent.rotatey0)
+  expr0 "r * cos(ang) - b * sin(ang)"
+  expr2 "r * sin(ang) + b * cos(ang)"
+  name rotateY
+  xpos 188
+  ypos -395
+ }
+ Dot {
+  name Dot1
+  xpos 222
+  ypos -199
+ }
+set N6ddcbc00 [stack 0]
+ Expression {
+  temp_name0 ang
+  temp_expr0 radians(parent.rotatex0)
+  temp_expr1 parent.angle
+  expr1 "b * sin(ang) + g * cos(ang)"
+  expr2 " b * cos(ang) - g * sin(ang) "
+  name rotateX
+  xpos 188
+  ypos -26
+ }
+ Grade {
+  multiply {{"1/max(parent.sx, .00001)"} {"1/max(parent.sy, .00001)"} {"1/max(parent.sz, .00001)"} 1}
+  black_clamp false
+  name Grade4
+  xpos 188
+  ypos 371
+ }
+ Grade {
+  whitepoint {{parent.range}}
+  black_clamp false
+  name Grade3
+  xpos 188
+  ypos 707
+ }
+set N6de08800 [stack 0]
+ Dot {
+  name Dot57
+  xpos 973
+  ypos 710
+ }
+ Expression {
+  expr0 "smoothstep(0,1, clamp(1-abs(r)) ) "
+  expr1 "smoothstep(0,1, clamp(1-abs(g)) ) "
+  expr2 "smoothstep(0,1, clamp(1-abs(b)) ) "
+  name Expression2
+  xpos 939
+  ypos 794
+ }
+set N6de09000 [stack 0]
+ Shuffle {
+  red blue
+  green blue
+  alpha blue
+  name Shuffle7
+  label "\[value in 1]"
+  xpos 1075
+  ypos 882
+ }
+push 0
+push $N6de09000
+ Shuffle {
+  red green
+  blue green
+  alpha green
+  name Shuffle6
+  label "\[value in 1]"
+  xpos 939
+  ypos 884
+ }
+push $N6de09000
+ Shuffle {
+  green red
+  blue red
+  alpha red
+  name Shuffle5
+  label "\[value in 1]"
+  xpos 810
+  ypos 887
+ }
+ Merge2 {
+  inputs 3+1
+  operation geometric
+  name Merge4
+  xpos 939
+  ypos 997
+ }
+ Dot {
+  name Dot59
+  xpos 973
+  ypos 1357
+ }
+ Dot {
+  name Dot60
+  tile_color 0x33ff3301
+  xpos 307
+  ypos 1357
+ }
+push $N6ddcbc00
+ Dot {
+  name Dot30
+  xpos -1376
+  ypos -199
+ }
+ Expression {
+  temp_name0 ang
+  temp_expr0 radians(parent.rotatex0)+PI*.5
+  expr0 "r * sin(ang) + g * cos(ang)"
+  channel1 {-rgba.red -rgba.green -rgba.blue none}
+  expr1 "b * sin(ang) + g * cos(ang)"
+  expr2 " b * cos(ang) - g * sin(ang) "
+  name rotateX4
+  xpos -1410
+  ypos -21
+ }
+ Grade {
+  multiply {{"1/max(parent.sx, .00001)"} {"1/max(parent.sy, .00001)"} {"1/max(parent.sz, .00001)"} 1}
+  black_clamp false
+  name Grade5
+  xpos -1410
+  ypos 378
+ }
+ Shuffle {
+  red blue
+  blue red
+  name Shuffle10
+  label "\[value in 1]"
+  xpos -1410
+  ypos 694
+ }
+ Grade {
+  whitepoint {{parent.range}}
+  black_clamp false
+  name Grade2
+  xpos -1410
+  ypos 796
+ }
+ Expression {
+  channel0 rgba
+  expr0 abs(b)
+  name Expression4
+  xpos -1410
+  ypos 912
+ }
+ Invert {
+  name Invert1
+  xpos -1410
+  ypos 970
+ }
+ Dot {
+  name Dot35
+  xpos -1376
+  ypos 1451
+ }
+ Dot {
+  name Dot34
+  tile_color 0x33ff3301
+  xpos 94
+  ypos 1451
+ }
+push $N6de08800
+ Dot {
+  name Dot3
+  xpos -304
+  ypos 710
+ }
+set N6de81000 [stack 0]
+ Dot {
+  name Dot33
+  xpos -865
+  ypos 710
+ }
+ Expression {
+  channel0 rgba
+  expr0 "1-sqrt(r**2 + b**2)"
+  name Expression3
+  xpos -899
+  ypos 846
+ }
+ Dot {
+  name Dot31
+  xpos -865
+  ypos 1400
+ }
+ Dot {
+  name Dot32
+  tile_color 0x33ff3301
+  xpos 107
+  ypos 1400
+ }
+push $N6dbf6400
+ Grade {
+  add {{cam_info.pos.x} {cam_info.pos.y} {cam_info.pos.z} 0}
+  reverse true
+  black_clamp false
+  name translate_pp1
+  xpos 1672
+  ypos 799
+ }
+ Expression {
+  temp_name0 dis
+  channel0 rgb
+  expr0 "sqrt(r**2 + g**2 + b**2) "
+  name Expression9
+  xpos 1672
+  ypos 880
+ }
+ Grade {
+  blackpoint {{parent.near}}
+  whitepoint {{parent.far}}
+  black_clamp false
+  name Grade7
+  xpos 1672
+  ypos 948
+ }
+ Dot {
+  name Dot20
+  xpos 1706
+  ypos 1451
+ }
+push $N6de81000
+ Expression {
+  channel0 rgba
+  expr0 "1-sqrt(r**2 + g**2 + b**2)"
+  name Expression5
+  xpos -338
+  ypos 807
+ }
+ Dot {
+  name Dot13
+  xpos -304
+  ypos 1351
+ }
+ Dot {
+  name Dot16
+  tile_color 0x33ff3301
+  xpos 149
+  ypos 1351
+ }
+push $N6de08800
+ Shuffle {
+  red blue
+  green blue
+  alpha blue
+  name Shuffle4
+  label "\[value in 1]"
+  xpos 188
+  ypos 797
+ }
+ Dot {
+  name Dot15
+  tile_color 0x33ff3301
+  xpos 222
+  ypos 1329
+ }
+ Switch {
+  inputs 6
+  which {{parent.type}}
+  name Switch2
+  tile_color 0x33ff3301
+  xpos 188
+  ypos 1448
+ }
+ Grade {
+  channels rgba
+  whitepoint {{1-parent.sharpness}}
+  name Grade17
+  xpos 188
+  ypos 2057
+ }
+ Dot {
+  name Dot36
+  xpos 222
+  ypos 2530
+ }
+set N6df11000 [stack 0]
+ Dot {
+  name Dot4
+  tile_color 0x33333301
+  xpos 450
+  ypos 2530
+ }
+ Invert {
+  name Invert2
+  xpos 416
+  ypos 2614
+ }
+ Dot {
+  name Dot5
+  tile_color 0x33333301
+  xpos 450
+  ypos 2716
+ }
+ Dot {
+  name Dot17
+  tile_color 0x33ff3301
+  xpos 331
+  ypos 2716
+ }
+push $N6df11000
+ Dot {
+  name Dot18
+  tile_color 0x33ff3301
+  xpos 222
+  ypos 2629
+ }
+ Switch {
+  inputs 2
+  which {{parent.invert}}
+  name Switch1
+  tile_color 0x33ff3301
+  xpos 188
+  ypos 2713
+ }
+ Clamp {
+  name Clamp2
+  xpos 188
+  ypos 3154
+ }
+ Constant {
+  inputs 0
+  channels rgb
+  format "256 256 0 0 256 256 1 square_256"
+  name Constant1
+  xpos -12
+  ypos 3126
+ }
+ Ramp {
+  p0 {0 100}
+  p1 {256 100}
+  name falloff
+  xpos -12
+  ypos 3291
+ }
+ STMap {
+  inputs 2
+  uv rgb
+  filter Mitchell
+  name STMap1
+  xpos 188
+  ypos 3285
+ }
+ Dot {
+  name Dot7
+  tile_color 0x33ff3301
+  xpos 222
+  ypos 3595
+ }
+ Switch {
+  inputs 2
+  which {{parent.ctrl==2}}
+  name Switch3
+  tile_color 0x33ff3301
+  xpos 188
+  ypos 3698
+ }
+ Dot {
+  name Dot24
+  xpos 222
+  ypos 4189
+ }
+set N6df66400 [stack 0]
+ Dot {
+  name Dot25
+  xpos 503
+  ypos 4189
+ }
+ FilterErode {
+  channels rgba
+  name FilterErode1
+  xpos 469
+  ypos 4273
+ }
+ FilterErode {
+  channels rgba
+  size -1
+  name FilterErode2
+  xpos 469
+  ypos 4363
+ }
+ Dot {
+  name Dot23
+  xpos 503
+  ypos 4477
+ }
+ Dot {
+  name Dot21
+  tile_color 0x33ff3301
+  xpos 331
+  ypos 4477
+ }
+push $N6df66400
+ Dot {
+  name Dot22
+  tile_color 0x33ff3301
+  xpos 222
+  ypos 4371
+ }
+ Switch {
+  inputs 2
+  which {{parent.erode}}
+  name Switch4
+  tile_color 0x33ff3301
+  xpos 188
+  ypos 4474
+ }
+ Dot {
+  name Dot43
+  xpos 222
+  ypos 5373
+ }
+set N6df86400 [stack 0]
+ Dot {
+  name Dot44
+  xpos -641
+  ypos 5373
+ }
+ Merge2 {
+  inputs 2
+  operation plus
+  mix 0.5
+  name Merge1
+  xpos -675
+  ypos 6100
+  disable {{!parent.shape}}
+ }
+ Dot {
+  name Dot42
+  tile_color 0x33ff3301
+  xpos -185
+  ypos 6103
+ }
+ Text2 {
+  inputs 0
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\n\nYou need to connect the rendering camera in order to view the mask 3D shape\n\nIf you don't want to see this message, uncheck \"View 3D Shape\""
+  old_message {{10 10 89 111 117 32 110 101 101 100 32 116 111 32 99 111 110 110 101 99 116 32 116 104 101 32 114 101 110 100 101 114 105 110 103 32 99 97 109 101 114 97 32 105 110 32 111 114 100 101 114 32 116 111 32 118 105 101 119 32 116 104 101 32 109 97 115 107 32 51 68 32 115 104 97 112 101 10 10 73 102 32 121 111 117 32 100 111 110 39 116 32 119 97 110 116 32 116 111 32 115 101 101 32 116 104 105 115 32 109 101 115 115 97 103 101 44 32 117 110 99 104 101 99 107 32 34 86 105 101 119 32 51 68 32 83 104 97 112 101 34}
+    }
+  box {100 937 {"width - 100"} {height}}
+  transforms {{0 2}
+    }
+  kern_values {{36 0}
+    }
+  cursor_position 141
+  global_font_scale 0.7
+  center {960 519}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1038}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 960 519 0 0 1 1 0 0 0 0}
+    }
+  name Text1
+  xpos -104
+  ypos 5842
+ }
+ Grade {
+  white {1 0.145 0.13 1}
+  white_panelDropped true
+  name Grade15
+  xpos -104
+  ypos 5919
+ }
+ Dot {
+  name Dot41
+  tile_color 0x33ff3301
+  xpos -70
+  ypos 6009
+ }
+ Switch {
+  inputs 2
+  which {{"\[exists parent.input1]"}}
+  name Switch7
+  tile_color 0x33ff3301
+  xpos -104
+  ypos 6100
+ }
+ Dot {
+  name Dot56
+  tile_color 0x33ff3301
+  xpos 107
+  ypos 6103
+ }
+push $N6df86400
+ Dot {
+  name Dot53
+  tile_color 0x33ff3301
+  xpos 222
+  ypos 6009
+ }
+ Switch {
+  inputs 2
+  which {{parent.shape}}
+  name Switch8
+  tile_color 0x33ff3301
+  xpos 188
+  ypos 6100
+ }
+ Output {
+  name Output1
+  xpos 188
+  ypos 6377
+ }
+push $N6db5dc00
+ NoOp {
+  name cam_info
+  xpos -213
+  ypos -1916
+  addUserKnob {20 User}
+  addUserKnob {13 pos l "cam pos"}
+  pos {{"\[value \[topnode input\[exists parent.input1]].world_matrix.3 ]"} {"\[value \[topnode input\[exists parent.input1]].world_matrix.7 ]"} {"\[value \[topnode input\[exists parent.input1]].world_matrix.11 ]"}}
+  addUserKnob {13 rot l "cam rotation"}
+  rot {{"\[value \[topnode input\[exists parent.input1]].rotate.x ] "} {"\[value \[topnode input\[exists parent.input1]].rotate.y ] "} {"\[value \[topnode input\[exists parent.input1]].rotate.z ] "}}
+  addUserKnob {7 focal}
+  focal {{"\[value \[topnode input\[exists parent.input1]].focal ]  "}}
+  addUserKnob {7 haperture}
+  haperture {{"\[value \[topnode input\[exists parent.input1]].haperture ]  "}}
+  addUserKnob {7 vaperture}
+  vaperture {{"\[value \[topnode input\[exists parent.input1]].vaperture ]  "}}
+  addUserKnob {7 near}
+  near {{"\[value \[topnode input\[exists parent.input1]].near ]  "}}
+  addUserKnob {7 far}
+  far {{"\[value \[topnode input\[exists parent.input1]].far ]  "}}
+ }
+end_group
